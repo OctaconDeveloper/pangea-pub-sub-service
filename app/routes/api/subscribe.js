@@ -1,9 +1,9 @@
 const { Router } = require("express");
 const { subscribe } = require("../../controllers");
-const { subscription: validateSubscriber } = require("../../validators")
+const { subscription: validate_subscriber } = require("../../validators")
 const router = Router(); 
 
-router.post("/subscribe/:topic", validateSubscriber,  subscribe);
+router.post("/subscribe/:topic", validate_subscriber,  subscribe);
   
 module.exports = router; 
      

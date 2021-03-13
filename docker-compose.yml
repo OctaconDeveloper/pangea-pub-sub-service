@@ -1,0 +1,15 @@
+version: '2'
+services: 
+    pangea-pub-sub: 
+        container_name: pangea-pub-sub
+        restart: always
+        build: .
+        ports: 
+            - 9002:9002
+        links: 
+            - mongo
+    mongo:
+        container_name: pangea-db
+        image: mongo
+        ports: 
+            - 27017:27017 

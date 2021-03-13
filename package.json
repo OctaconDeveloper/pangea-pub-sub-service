@@ -9,10 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+"
+    "url": "git+https://github.com/OctaconDeveloper/pangea-pub-sub-service.git"
   },
   "keywords": [
-    "jjj"
+    "publish",
+    "subscribe",
+    "webhook"
   ],
   "author": "Harrys Jil",
   "license": "ISC",

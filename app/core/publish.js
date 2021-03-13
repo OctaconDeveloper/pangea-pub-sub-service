@@ -7,12 +7,22 @@ const topics = new TopicRepository();
 
 const publishSubscription = async (req, res) => {
     try {
-        const { params: {topic} , body } = req
-        
-        const alltopics = await topics.findTopicByName(topic);
-        const transformedTopics = singleTopic(alltopics);
-        pushNotifications(transformedTopics, body)
-        success(res, {topic, ...body})
+        const { params: { topic } , body } = req
+        const topic_to_be_processed = await topics.findTopicByName(topic);
+        if(!topic_to_be_processed)
+        {
+            badRequest(res, `No record found for topic ${topic}`)
+        }
+        else
+        {
+            const transformed_topics = singleTopic(topic_to_be_processed);
+            pushNotifications(transformed_topics, body)
+            const response = {
+                topic,
+                ...body
+            }
+            success(res, response)
+        }
     }  
     catch (e)
     {
