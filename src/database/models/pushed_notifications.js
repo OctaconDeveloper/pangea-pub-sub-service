@@ -9,10 +9,6 @@ const PushNotificationSchema = new Schema({
     body: {
         type: Object,
         required: true
-    },
-    status: {
-        typee:Boolean,
-        default: false
     }
 }, { timestamps: true });
 
