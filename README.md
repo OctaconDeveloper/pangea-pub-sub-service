@@ -8,7 +8,7 @@ Docker, MongoDB, ExpressJS
 
 
 ### **System Requirement**
-This project has been dockerized. It is ideal that you have docker installed on the machine. Alternatively 
+This project has been dockerized. It is ideal that you have `docker` installed on the machine. Alternatively you can run it directly on your local machine and you would need to have `nodeJS` and `MongoDB` installed 
 
 
 ### **Installation**
