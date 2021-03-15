@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const cors = require("cors");
-const routes = require("./app/routes");
+const routes = require("./src/routes");
 const app = express();
 
 app.use(cors());
@@ -37,3 +37,5 @@ app.get("/",  (req, res) => {
 
 
 app.use(routes)
+
+module.exports = app

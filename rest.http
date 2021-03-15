@@ -1,0 +1,16 @@
+POST http://localhost:9002/v1/subscribe/default-notification HTTP/1.1
+content-type: application/json
+
+{
+    "url": "https://da7466d34723.ngrok.io/testwebhook"
+}
+
+###
+
+POST http://localhost:9002/v1/publish/default-notification HTTP/1.1
+content-type: application/json
+
+{
+  "message": "Hello world",
+  "never": "again"
+}
